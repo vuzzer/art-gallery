@@ -6,7 +6,7 @@ const connectDatabase = () => {
     .connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
       console.log("Mongoose Connected");
-    });
+    }).catch((error) => console.log(error));
 };
 
 module.exports = connectDatabase;

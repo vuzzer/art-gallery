@@ -34,7 +34,6 @@ export const AuthProvider = ({ children }) => {
       setError("");
       setLoginCredential({ email, password });
       const response = await loginService(email, password);
-
       if (response.status === 200) {
         setLoginLoading(false);
         toast.success(`Welcome back, ${response.data.foundUser.firstName}!`);
@@ -62,7 +61,8 @@ export const AuthProvider = ({ children }) => {
       }
     } catch (error) {
       setLoginLoading(false);
-      setError(error.response.data.errors[0]);
+      setError(error.response.data.errors);
+      console.log(error)
     } finally {
       setLoginLoading(false);
     }
