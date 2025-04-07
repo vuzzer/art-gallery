@@ -173,3 +173,5 @@ Perform end-to-end testing of user login, checkout, and product browsing.
 Write automated test cases using Cypress or Selenium.
 - Submission:
 Test scripts and a report of findings.
+
+npx hardhat run scripts/deploy-with-uris.ts --network sepolia

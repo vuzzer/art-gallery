@@ -88,6 +88,10 @@ export function makeServer({ environment = "development" } = {}) {
 
     routes() {
       this.namespace = "api";
+      // Achemy
+      this.passthrough("https://eth-sepolia.g.alchemy.com/**");
+      this.passthrough();
+
       // auth routes (public)
       this.post("/auth/signup", signupHandler.bind(this));
       this.post("/auth/login", loginHandler.bind(this));

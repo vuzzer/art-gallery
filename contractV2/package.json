@@ -1,0 +1,19 @@
+{
+  "name": "hardhat-project",
+    "scripts": {
+    "nft": "node scripts/upload-nfts.js"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.19"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.2.0",
+    "dotenv": "^16.4.7",
+    "fs": "^0.0.1-security",
+    "mime": "^4.0.6",
+    "nft.storage": "^7.2.0",
+    "p-limit": "^6.2.0",
+    "path": "^0.12.7"
+  }
+}

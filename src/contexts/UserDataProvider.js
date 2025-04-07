@@ -19,6 +19,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { changeQuantityCartService } from "../services/cart-services/changeQuantityCartService";
 import { userDataReducer, initialUserData } from "../reducer/userDataReducer";
 import { clearCartService } from "../services/cart-services/clearCartService";
+import productList from "../backend/db/uris.json";
+import { getContract, getReadContract } from "../utils/contract.js";
 
 const UserDataContext = createContext();
 
@@ -29,6 +31,8 @@ export function UserProvider({ children }) {
     userDataReducer,
     initialUserData
   );
+
+  const contract = getReadContract();
 
   const { auth } = useAuth();
 
@@ -288,6 +292,42 @@ export function UserProvider({ children }) {
     }
   }, [auth]);
 
+  const connectWallet = async () => {
+    if (!window.ethereum) return toast.error("Please install MetaMask");
+    try {
+      const accounts = await window.ethereum.request({
+        method: "eth_accounts",
+      });
+
+      if (accounts.length === 0) {
+        await window.ethereum.request({ method: "eth_requestAccounts" });
+        toast.success("Wallet connected");
+      }
+
+      const contractWrite = await getContract();
+      const tx = await contractWrite.buyNFT(0, 10, { value: 10 });
+      await tx.wait();
+
+    } catch (error) {
+      if (error.code === 4001) {
+        toast.error("Connection denied");
+      } else {
+        toast.error("Request rejected");
+      }
+    }
+  };
+
+  const fetchMintedProducts = async (name) => {
+    const filteredProduct = productList
+      .flat()
+      .filter((item) => item.name === name);
+    if (filteredProduct.length > 0) {
+      const minted = await contract.isMinted(filteredProduct[0].tokenURI);
+      return minted;
+    }
+    return false;
+  };
+
   useEffect(() => {
     getWishlistProducts();
     getCartProducts();
@@ -313,6 +353,8 @@ export function UserProvider({ children }) {
         cartCountHandler,
         cartLoading,
         clearCartHandler,
+        connectWallet,
+        fetchMintedProducts,
       }}
     >
       {children}
