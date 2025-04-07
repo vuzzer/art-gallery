@@ -1,0 +1,337 @@
+[
+  {
+    "name": "Ethereal Expressions",
+    "tokenURI": "https://bafkreie5dh7s72wytes3ppt3lfst5nhcxrnllfx4f6m4qs2v5hidfwjqhq.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Optimum Stride",
+    "tokenURI": "https://bafkreih2zaejjulvnxv72fe6y3a73pbbmdtrcfe623udkqagxk54cu5nam.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Empower Pro X",
+    "tokenURI": "https://bafkreiajtyrtcjnouuuizqtwxlenodyjkp2suhryif2jodepxhezv7zzie.ipfs.w3s.link",
+    "isStock": false
+  },
+  {
+    "name": "Elite Reactor",
+    "tokenURI": "https://bafkreihilbi2mpjf7cmraw46vbrv33sr45eq5em5spnkntecenh6t4o2aa.ipfs.w3s.link",
+    "isStock": false
+  },
+  {
+    "name": "Catalyst Hyper",
+    "tokenURI": "https://bafkreifcn5rdsh7wbgb4yxtwf3twxw2ehha6soiq5kj2nzc7efdgjclyau.ipfs.w3s.link",
+    "isStock": false
+  },
+  {
+    "name": "Fusion Element",
+    "tokenURI": "https://bafkreiedwothbpbzd34yop4lndzrhpnkwr6hvsen5dgey33jqsjbuewkw4.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Triumph Elite",
+    "tokenURI": "https://bafkreiciqtifyyvbydyrrbk5prxytjcrz3tj6tjnspmeoq3rjbd7sjdcpq.ipfs.w3s.link",
+    "isStock": false
+  },
+  {
+    "name": "Evolve Pro X",
+    "tokenURI": "https://bafkreiangkcvwqcvmjk4jb2pynupmvhglwiqj6r64zso3zy6er3zwpixdu.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Innovate Optima",
+    "tokenURI": "https://bafkreidbxsjtyt2wv5ne3ldkml5gvcronq63qeeks55p4vr7agkptlfwvu.ipfs.w3s.link",
+    "isStock": false
+  },
+  {
+    "name": "Phoenix Fusion",
+    "tokenURI": "https://bafkreicpcfvub7s77adsuth3kxdvdv3nvltgrgmkr5a3xht3uo2xdql7pi.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Turbo Impact",
+    "tokenURI": "https://bafkreieeh5gxwyqxw2dhzcyecfthl7iv5tdjlprus7jhys3av5blvmzlqi.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Aether Ultra",
+    "tokenURI": "https://bafkreifcbzbnpl72vhaenyz42u7wlafpjvurysiyxssphrqgvywgsbgdxe.ipfs.w3s.link",
+    "isStock": false
+  },
+  {
+    "name": "Precision Glide",
+    "tokenURI": "https://bafkreihd53fqttcrf3ywiq27x3zh564r7sygbr2r46dwi3airrrp5cnida.ipfs.w3s.link",
+    "isStock": false
+  },
+  {
+    "name": "Luminous Elite",
+    "tokenURI": "https://bafkreigzdi5qbejn5wjgxkmryl6nrtp2hwrfzgtf7v4omjpegy7hub7nhu.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Surge Pro X",
+    "tokenURI": "https://bafkreihpytfeensdudwhc4vmr2ymwqih6afujcginanjofnludwbv7jcpe.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Quantum Evo",
+    "tokenURI": "https://bafkreiec6voa7rdjih3il2rumckmg75oxysfkcgcrp7nogs2wynabxwcqm.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Catalyst Hyperion",
+    "tokenURI": "https://bafkreibxs6z7pgkr7pga5kqqshzeh335bknopytn2o4v2cv72j5tbztt6m.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Fusion Prodigy",
+    "tokenURI": "https://bafkreicpscgiab3kiunyazrwpxoji55jdfb4efdb4ywkvxg3kjtulfba5m.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Vanguard Accelerate",
+    "tokenURI": "https://bafkreihng2qjyfktkjq7u6tgxiysgx7b5hbywc6dcttnecm3tbsnjdatqm.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Nova Ignition",
+    "tokenURI": "https://bafkreifkm2amkmu5obtidakubau24h2nwos2boe7bh7vlr4hzg36mieycy.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Ascend Velocity",
+    "tokenURI": "https://bafkreihr5oqwjm4fuq46oxuiyvaybpwe3lx7flbbe7q5exouui7mkm7e3u.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Velocity Quantum",
+    "tokenURI": "https://bafkreibgp4dyrtsmk4jijxv2wf5u22kp2k355tmm3kq5z7ngxeyrule54q.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Equinox Dynamo",
+    "tokenURI": "https://bafkreif5j4s7eamrjtl4pirorik7cyirqy4rdjgrsmasi2rtxcsm5hgr6y.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Precision Apex",
+    "tokenURI": "https://bafkreigyhdtxhy4raetfc5r5653bfe2rbbocr62cwbjx3425sin6kr3raq.ipfs.w3s.link",
+    "isStock": false
+  },
+  {
+    "name": "Apex Quantum X",
+    "tokenURI": "https://bafkreibpddorxlmbl67zav6oxvgg55n447gttyw6qtbif4mam4hyzhjqt4.ipfs.w3s.link",
+    "isStock": false
+  },
+  {
+    "name": "Quantum Velocity",
+    "tokenURI": "https://bafkreibi674wqnxlvaiv6iry5nabkpmjpe667vjvpxoxobluai5ukdrnt4.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Elevation Dynamo X",
+    "tokenURI": "https://bafkreihwyvfmdoe3iizozw5par3x3aaohnsyv2u2wgjoa47kgnt6mnvffa.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Radiant Momentum",
+    "tokenURI": "https://bafkreiewiqicfuynqdqpdto5j2krv3n5so6x6s75u4yj3p3adgwqdw27tm.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Ignite Precision",
+    "tokenURI": "https://bafkreihd6tykpgtuqg2znxfozlefj5ouacfrgprvsqmo355asvxxx5gnjy.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Luminary Synthesis",
+    "tokenURI": "https://bafkreiaxuyxos55xqpof7lrn6vyfxvioeuje6xbjljls2pdjvvy3qdh4ra.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Velocity Momentum X",
+    "tokenURI": "https://bafkreiaxvkfioxu4vqwn6oyvgg7spdqnuusg7ijfhpukmhwfdibr7gsvca.ipfs.w3s.link",
+    "isStock": false
+  },
+  {
+    "name": "Synthesis Optimum",
+    "tokenURI": "https://bafkreiefte4swi2i2vqchtgzdtxt3ksfaxomve6cowodljywubtxwzpe5i.ipfs.w3s.link",
+    "isStock": false
+  },
+  {
+    "name": "Optimum Elite",
+    "tokenURI": "https://bafkreidavnd3wppranvklb43icovmv3xqpqgyv3jn6gk7spa3ininlyv6u.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Empower Catalyst",
+    "tokenURI": "https://bafkreigkjesjusay6khnmsxu2z5olk2x4jwep6ilsnhej3bzbpyzehcoxy.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Abstract Odyssey",
+    "tokenURI": "https://bafkreierqm4mgxf4irt3lrux72tbaew7ladyxm74ddro3mvmb4umadtxfe.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Colorful Abstractions",
+    "tokenURI": "https://bafkreibqpyx6xbaczp4257sxz43ciemw4ganqo2pimhvcljwzz43usvtt4.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Abstract Impressions",
+    "tokenURI": "https://bafkreigjd75cvan7zhdrj7arcjnl4lpdq2n2csozyrfzbwyxrgfuxlctoa.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Artistic Whimsy",
+    "tokenURI": "https://bafkreifieocshxranwrrjd445zygjfe7litafkjc2o52liztajkjt36exi.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Abstract Alchemy",
+    "tokenURI": "https://bafkreif5z26mxkup2smiajrnm2nddxdm2xjis6v6p6jb5dpkbw6f4thgue.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Apex Fusion X",
+    "tokenURI": "https://bafkreih76i6xd3l5eackjdjlaqkhxwlmnppq3fbdwk6f6szqlyjaomerta.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Quantum Impact",
+    "tokenURI": "https://bafkreiecl22eqf2kizev5pnochevcfvgy26nikv6iw6z3iyrulokiir2wy.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Elevation Ultra",
+    "tokenURI": "https://bafkreig6avdcwqtkt6ewl7hh56cavnz5xs3uotqnhwuwxuqsjgdibc3ifq.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Radiant Elite",
+    "tokenURI": "https://bafkreicnxoclppdwd3et4spnj6x73rmkpvwbna3mjxvh7u5pkvxuqqodm4.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Ignite Pro X",
+    "tokenURI": "https://bafkreidwa56pwb3h4ecczouifjhqkv4igvy6hclh3nldfxhslmmgderpsi.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Luminary Evo",
+    "tokenURI": "https://bafkreidxqmptnydo4txuup2s4i7yr2jc24whvkzpyiuvc7nbzqmpewqoyq.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Velocity Boost",
+    "tokenURI": "https://bafkreidp6onh57cdaqavvkzznvrba6gf76gh6goiijk2jr7k26lugie5na.ipfs.w3s.link",
+    "isStock": false
+  },
+  {
+    "name": "Synthesis Xcel",
+    "tokenURI": "https://bafkreicsfflvotslqjwtm4ddevnbkgav6wy4xzyalqwcqnxto6srdvydby.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Momentum Prime",
+    "tokenURI": "https://bafkreifpp7mvxpvied3ixkitwyan6oa5frqczuk2t5mcogprvhha265qte.ipfs.w3s.link",
+    "isStock": false
+  },
+  {
+    "name": "Catalyst Apex X",
+    "tokenURI": "https://bafkreifj5fmwr6theamlrvtasa4tqp7h2hwf5mhxlx4ymynni2pvt4yapm.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Fusion Quantum",
+    "tokenURI": "https://bafkreiaztgkhkk3rxmpzqyq5vy6s7y7un4k7ghha5abxsj5f3e4havwfpm.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Triumph Ignite",
+    "tokenURI": "https://bafkreia6parcpkzat2eefqmcdfq3zvs75i3rrnzghyqzljzjrw66zizb4a.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Evolve Luminary",
+    "tokenURI": "https://bafkreibcscdsglh52ymldc2rr3vbcunk6jq3uizpvbl472efqthrfc6ctu.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Accelerate Equinox",
+    "tokenURI": "https://bafkreigqncrqruzkkkdozlqmndd7e2a4hefngbv6jtzw7jre7uerfmyaj4.ipfs.w3s.link",
+    "isStock": false
+  },
+  {
+    "name": "Innovate Precision X",
+    "tokenURI": "https://bafkreidiqxou2gr35vaeuotdhrhz5uskkplioqtmsi6gm5mg2qxqqlw6pi.ipfs.w3s.link",
+    "isStock": false
+  },
+  {
+    "name": "Phoenix Apex",
+    "tokenURI": "https://bafkreififdf7oa6gavz746gllhzelloc6oep35fa7mlrkxsprqakjwbfzi.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Turbo Quantum X",
+    "tokenURI": "https://bafkreidg4a7s2y54nwpatbxmsjlf3j3pagzcgobrah6i4rzenhcl5erxdu.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Aether Elevation",
+    "tokenURI": "https://bafkreig724rnhs2jdrzxbe32rm4hpbo7etjwqawyyfpnqoqciwknequqca.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Precision Surge",
+    "tokenURI": "https://bafkreif2dtagvmgtes2whkzrkg3ybhpsdcnoq3ba4v6pjynafa7ca6gwru.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Luminous Momentum X",
+    "tokenURI": "https://bafkreiga3z7oxfrtwlrigrzeibaem55rlqtslgqahqubrdjto264amlke4.ipfs.w3s.link",
+    "isStock": false
+  },
+  {
+    "name": "Surge Optimum",
+    "tokenURI": "https://bafkreid54whotuqcp5tleozlcub2i4jkyzsoo4zduwcoup3ituhp4mncdq.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Momentum Elite",
+    "tokenURI": "https://bafkreidmm3rwxcavr6jiwhrqslygrqmtn7ivdxvdjhbr7tmjjyfhytagki.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Harmony Catalyst",
+    "tokenURI": "https://bafkreid6p6pasflt6pw6oetrtw2bcum7legrfsokzocjc5xaqxhdwqlzni.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Enigma Nova X",
+    "tokenURI": "https://bafkreia2swtiycafbgjzy2vsfwt5hzpaxeivmzwbqdhfeywcog2bg3zram.ipfs.w3s.link",
+    "isStock": false
+  },
+  {
+    "name": "Zenith Ascend",
+    "tokenURI": "https://bafkreibg2mwfiojs4eur37gostxbt6qsfymabv7y2yl5uut3tqckwoisdu.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Catalyst Velocity X",
+    "tokenURI": "https://bafkreic4rouizmrmb6yry3xzozsjwdzb5mmayolsukskuqwo7hvlwuqzce.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Fusion Equinox",
+    "tokenURI": "https://bafkreierizaka3q7mmvfknk3ytyp7c4q32j3dikut6wals4r7srntv64sa.ipfs.w3s.link",
+    "isStock": true
+  },
+  {
+    "name": "Vanguard Precision",
+    "tokenURI": "https://bafkreihlzob32huwbriaxghnbtcglcbxcjmfuplebhwtj32jafxddv7axe.ipfs.w3s.link",
+    "isStock": true
+  }
+]
