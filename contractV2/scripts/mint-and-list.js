@@ -3,14 +3,14 @@ const fs = require("fs")
 
 async function main(){
     // Read deployed contract address from file
-    const deployed = JSON.parse(fs.readFileSync("./ignition/deployments/gamma/deployed_addresses.json", "utf-8"))
+    const deployed = JSON.parse(fs.readFileSync("./deployments/NFTMarketPlace.json", "utf-8"))
 
     // Read tokenURIs from local file
     const nftData = JSON.parse(fs.readFileSync("./uris.json", "utf-8"))
-    const MAX_SUPPLY = 5;
+    const MAX_SUPPLY = 6;
 
       // Get deployed contract address
-    const contractAddress = deployed["LockModule#NFTMarketPlace"];
+    const contractAddress = deployed["proxyAddress"];
     if (!contractAddress) {
         throw new Error("Contract address not found in deployed_addresses.json");
       }

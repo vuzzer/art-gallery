@@ -20,7 +20,8 @@ import { changeQuantityCartService } from "../services/cart-services/changeQuant
 import { userDataReducer, initialUserData } from "../reducer/userDataReducer";
 import { clearCartService } from "../services/cart-services/clearCartService";
 import productList from "../backend/db/uris.json";
-import { getContract, getReadContract } from "../utils/contract.js";
+import { getWriteContract, getReadContract } from "../contract/contract.js";
+import {parseEther} from 'ethers'
 
 const UserDataContext = createContext();
 
@@ -32,7 +33,7 @@ export function UserProvider({ children }) {
     initialUserData
   );
 
-  const contract = getReadContract();
+  const readContract = getReadContract();
 
   const { auth } = useAuth();
 
@@ -292,7 +293,12 @@ export function UserProvider({ children }) {
     }
   }, [auth]);
 
-  const connectWallet = async () => {
+  function randomEthWei(min = 0.000002, max = 0.00006) {
+    const eth = Math.random() * (max - min) + min;
+    return parseEther(eth.toFixed(8)); // return BigInt
+  }
+
+  const buyNFT = async (id) => {
     if (!window.ethereum) return toast.error("Please install MetaMask");
     try {
       const accounts = await window.ethereum.request({
@@ -304,8 +310,11 @@ export function UserProvider({ children }) {
         toast.success("Wallet connected");
       }
 
-      const contractWrite = await getContract();
-      const tx = await contractWrite.buyNFT(0, 10, { value: 10 });
+      // Generate random price for NFT
+      const priceNFT = randomEthWei()
+
+      const contractWrite = await getWriteContract();
+      const tx = await contractWrite.buyNFT(id, priceNFT, { value: priceNFT });
       await tx.wait();
 
     } catch (error) {
@@ -318,14 +327,29 @@ export function UserProvider({ children }) {
   };
 
   const fetchMintedProducts = async (name) => {
+    const tokenCounter = await readContract.tokenCounter();
+    const counter = tokenCounter.toString()
+    console.log(counter)
+
     const filteredProduct = productList
       .flat()
       .filter((item) => item.name === name);
     if (filteredProduct.length > 0) {
-      const minted = await contract.isMinted(filteredProduct[0].tokenURI);
-      return minted;
+      let id = null;
+      const tokenUri = filteredProduct[0].tokenURI;
+      const isMinted = await readContract.isMinted(tokenUri);
+
+      for (let tokenId = 0; tokenId < counter; tokenId++){
+        const uri = await readContract.tokenURI(tokenId);
+        if(uri === tokenUri){
+          id = tokenId;
+          break;
+        }
+      }
+
+      return {minted: isMinted, id: id};
     }
-    return false;
+    return {minted: false, id: null};
   };
 
   useEffect(() => {
@@ -353,7 +377,7 @@ export function UserProvider({ children }) {
         cartCountHandler,
         cartLoading,
         clearCartHandler,
-        connectWallet,
+        buyNFT,
         fetchMintedProducts,
       }}
     >

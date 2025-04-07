@@ -1,7 +1,13 @@
 {
   "name": "hardhat-project",
-    "scripts": {
-    "nft": "node scripts/upload-nfts.js"
+  "scripts": {
+    "nft": "node scripts/upload-nfts.js",
+    "deploy": "npx hardhat run scripts/deploy-proxy.js --network sepolia",
+    "mintNFT": "npx hardhat run scripts/mint-and-list.js --network sepolia",
+    "ipfs": "npx hardhat run scripts/upload-to-ipfs.js --network sepolia",
+    "compile": "npx hardhat compile",
+    "clean": "npx hardhat clean",
+    "test": "npx hardhat test"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
@@ -9,6 +15,8 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^5.2.0",
+    "@openzeppelin/contracts-upgradeable": "^5.2.0",
+    "@openzeppelin/hardhat-upgrades": "^3.9.0",
     "dotenv": "^16.4.7",
     "fs": "^0.0.1-security",
     "mime": "^4.0.6",

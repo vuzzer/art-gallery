@@ -20,7 +20,7 @@ export const ProductListingSection = () => {
     wishlistHandler,
     addToCartHandler,
     cartLoading,
-    connectWallet,
+    buyNFT,
     fetchMintedProducts
   } = useUserData();
 
@@ -52,7 +52,7 @@ export const ProductListingSection = () => {
         <ProductCard
           key={product._id}
           product={product}
-          connectWallet={connectWallet}
+          buyNFT={buyNFT}
           addToCartHandler={addToCartHandler}
           wishlistHandler={wishlistHandler}
           isProductInCart={isProductInCart}

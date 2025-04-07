@@ -1,14 +1,17 @@
 const {loadFixture} = require("@nomicfoundation/hardhat-toolbox/network-helpers");
 const { expect } = require("chai");
+const { upgrades } = require("hardhat");
 
 describe('NFTMarketPlace', function(){
     const uri =  "ipfs://token-uri";
+
     async function deployNFTMarketPlace(){
         const [owner, otherAccount, addr2] = await ethers.getSigners();
-        const NFTMarketPlace = await ethers.getContractFactory("NFTMarketPlace")
-        const nftMarketPlace = await NFTMarketPlace.deploy()
-
-        return {owner, otherAccount, nftMarketPlace, addr2}
+        const factoryNFTMarketPlace = await ethers.getContractFactory("NFTMarketPlace")
+        const proxyNFTMarketPlace = await upgrades.deployProxy(factoryNFTMarketPlace, [], {initializer: "initialize"})
+        
+        await proxyNFTMarketPlace.waitForDeployment();
+        return {owner, otherAccount, nftMarketPlace: proxyNFTMarketPlace, addr2}
     }
 
     describe('Deployment', function(){

@@ -6,9 +6,10 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { AiTwotoneHeart } from "react-icons/ai";
 
 
-export const ProductCard = ({ product, connectWallet, addToCartHandler, wishlistHandler, isProductInCart, isProductInWishlist, fetchMintedProducts, cartLoading }) => {
+export const ProductCard = ({ product, buyNFT, addToCartHandler, wishlistHandler, isProductInCart, isProductInWishlist, fetchMintedProducts, cartLoading }) => {
   const [isMinted, setIsMinted] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [tokenId, setTokenId] = useState(null);
 
   const {
     _id,
@@ -27,8 +28,9 @@ export const ProductCard = ({ product, connectWallet, addToCartHandler, wishlist
   useEffect(() => {
     const check = async () => {
       try {
-        const res = await fetchMintedProducts(name);
-        setIsMinted(res);
+        const {minted, id} = await fetchMintedProducts(name);
+        setIsMinted(minted);
+        setTokenId(id)
       } catch (err) {
         console.error(err);
       } finally {
@@ -38,6 +40,12 @@ export const ProductCard = ({ product, connectWallet, addToCartHandler, wishlist
 
     check();
   }, [name, fetchMintedProducts]);
+
+  const buy = (id) => {
+    if(id){
+        buyNFT(id)
+    }
+  }
 
   return (
     <Tilt key={_id} tiltMaxAngleX={5} tiltMaxAngleY={5} glareEnable={false} transitionSpeed={2000} scale={1.02}>
@@ -68,7 +76,7 @@ export const ProductCard = ({ product, connectWallet, addToCartHandler, wishlist
 
         <div className="product-card-buttons" style={{ width: 200, marginBottom: 10, marginTop: 5 }}>
           {!loading && isMinted && (
-            <button onClick={connectWallet} className="cart-btn" style={{ padding: 15, backgroundColor: "#03045e" }}>
+            <button onClick={() => buy(tokenId)} className="cart-btn" style={{ padding: 15, backgroundColor: "#03045e" }}>
               Buy with metamask
             </button>
           )}

@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.28;
 
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/utils/Address.sol";
+import "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721URIStorageUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
 /// @dev Represents a single NFT listing on the marketplace
 struct Listing {
@@ -16,8 +16,7 @@ struct Listing {
 /// @author @BienvenuKouassi
 /// @notice Allows the owner to mint and list NFTs, and users to purchase them with ETH
 /// @dev Inherits from ERC721URIStorage and Ownable
-contract NFTMarketPlace is ERC721URIStorage, Ownable {
-    using Address for address payable;
+contract NFTMarketPlace is ERC721URIStorageUpgradeable, OwnableUpgradeable, UUPSUpgradeable {
 
     /// @notice Tracks the number of NFTs minted
     uint256 public tokenCounter;
@@ -37,8 +36,17 @@ contract NFTMarketPlace is ERC721URIStorage, Ownable {
     /// @notice Emitted when the listing status of an NFT is updated
     event StockUpdated(uint256 indexed tokenId, bool isListed);
 
-    /// @notice Initializes the NFT collection with a name and symbol
-    constructor() ERC721("Art Galery", "AGNFT") Ownable(msg.sender) {
+    /// @custom:oz-upgrades-unsafe-allow constructor
+    constructor() {
+        _disableInitializers();
+    }
+
+    function initialize() public initializer {
+        __ERC721_init("Art Galery", "AGNFT");
+        __ERC721URIStorage_init();
+        __Ownable_init(msg.sender);
+        __UUPSUpgradeable_init();
+
         tokenCounter = 0;
     }
 
@@ -81,12 +89,13 @@ contract NFTMarketPlace is ERC721URIStorage, Ownable {
         require(msg.value == expectedPrice, "Incorrect ETH amount");
 
         // Transfer ETH to the seller
-        payable(listing.seller).sendValue(msg.value);
+        (bool sucess, ) = payable(listing.seller).call{value: msg.value}("");
+        require(sucess, "ETH transfer failed");
 
         // Transfer NFT ownership to the buyer
         _transfer(listing.seller, msg.sender, tokenId);
 
-        // Update seller info for future listings
+        // Update seller info for listings
         listings[tokenId].seller = msg.sender;
 
         emit NFTPurchased(msg.sender, tokenId, msg.value);
@@ -103,4 +112,6 @@ contract NFTMarketPlace is ERC721URIStorage, Ownable {
     function isMinted(string memory uri) public view returns (bool) {
         return uriUsed[uri];
     }
+
+    function _authorizeUpgrade(address) internal override onlyOwner {}
 }
