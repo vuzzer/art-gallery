@@ -1,6 +1,5 @@
 import "./ProductListingSection.css";
-import React, {useEffect, useState} from "react";
-
+import React from "react";
 import { useData } from "../../../../contexts/DataProvider.js";
 import { getCategoryWiseProducts } from "../../../../helpers/filter-functions/category";
 import { getRatedProducts } from "../../../../helpers/filter-functions/ratings";

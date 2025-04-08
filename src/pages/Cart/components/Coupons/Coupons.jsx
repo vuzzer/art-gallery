@@ -54,7 +54,7 @@ export const Coupons = ({ couponSelected, setCouponSelected }) => {
       {isCouponClicked && (
         <div className="coupon-list-container">
           {couponsData.map((coupon) => {
-            const { id, name, description, minimumPurchase, discount, amount } =
+            const { id, name, description, minimumPurchase } =
               coupon;
             return (
               <div key={id} className="coupon-card">
