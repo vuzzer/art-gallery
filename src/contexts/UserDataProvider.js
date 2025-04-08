@@ -319,11 +319,13 @@ export function UserProvider({ children }) {
         toast.success(
           `🎉 NFT #${tokenId.toString()} purchased for ${ethers.formatEther(
             paid
-          )} ETH`
+          )} ETH`,
+          {autoClose: 5000}
         );
       });
 
       const tx = await contractWrite.buyNFT(id, priceNFT, { value: priceNFT });
+      toast.success(`transaction in progress`);
       await tx.wait();
     } catch (error) {
       if (error.code === 4001) {
@@ -353,9 +355,9 @@ export function UserProvider({ children }) {
         }
       }
 
-      return { minted: isMinted, id: id };
+      return { minted: isMinted, tokenId: id };
     }
-    return { minted: false, id: null };
+    return { minted: false, tokenId: null };
   };
 
   useEffect(() => {

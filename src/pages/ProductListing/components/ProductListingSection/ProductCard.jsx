@@ -28,11 +28,11 @@ export const ProductCard = ({ product, buyNFT, addToCartHandler, wishlistHandler
   useEffect(() => {
     const check = async () => {
       try {
-        const {minted, id} = await fetchMintedProducts(name);
+        const {minted, tokenId} = await fetchMintedProducts(name);
         setIsMinted(minted);
-        setTokenId(id)
+        setTokenId(tokenId)
       } catch (err) {
-        console.error(err);
+        console.error(err, tokenId);
       } finally {
         setLoading(false);
       }
@@ -42,9 +42,10 @@ export const ProductCard = ({ product, buyNFT, addToCartHandler, wishlistHandler
   }, [name, fetchMintedProducts]);
 
   const buy = (id) => {
-    if(id){
-        buyNFT(id)
+    if(id == null){
+        return;   
     }
+    buyNFT(id)
   }
 
   return (
