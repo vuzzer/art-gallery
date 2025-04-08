@@ -50,7 +50,7 @@
   "scripts": {
     "dev": "concurrently \"node server/index.js\" \"react-scripts start\"",
     "start": "concurrently \"node server/index.js\" \"react-scripts start\"",
-    "build": "react-scripts build",
+    "build": "concurrently \"node server/index.js\" \"react-scripts build\"",
     "test": "concurrently \"node server/index.js\" \"react-scripts test\"",
     "eject": "concurrently \"node server/index.js\" \"react-scripts eject\""
   },

@@ -22,10 +22,10 @@ async function main(){
     // Limit to 5 NFTs
     const limit = Math.min(nftData.length, MAX_SUPPLY);
     for (let i = 0; i < limit; i++) {
-        const { tokenURI } = nftData[i];
+        const { tokenURI, isStock } = nftData[i];
         console.log(`Minting and listing NFT ${i + 1}/${limit}...`);
     
-        const tx = await contract.mintAndList(tokenURI, true);
+        const tx = await contract.mintAndList(tokenURI, isStock);
         await tx.wait();
     
         console.log(`✅ NFT ${i + 1} minted and listed: ${tokenURI}`);

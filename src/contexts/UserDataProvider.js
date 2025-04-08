@@ -21,7 +21,7 @@ import { userDataReducer, initialUserData } from "../reducer/userDataReducer";
 import { clearCartService } from "../services/cart-services/clearCartService";
 import productList from "../backend/db/uris.json";
 import { getWriteContract, getReadContract } from "../contract/contract.js";
-import {parseEther} from 'ethers'
+import { parseEther, ethers } from "ethers";
 
 const UserDataContext = createContext();
 
@@ -311,12 +311,20 @@ export function UserProvider({ children }) {
       }
 
       // Generate random price for NFT
-      const priceNFT = randomEthWei()
-
+      const priceNFT = randomEthWei();
       const contractWrite = await getWriteContract();
+
+      // Listen for the NFTPurchased event (only once)
+      contractWrite.once("NFTPurchased", (buyer, tokenId, paid) => {
+        toast.success(
+          `🎉 NFT #${tokenId.toString()} purchased for ${ethers.formatEther(
+            paid
+          )} ETH`
+        );
+      });
+
       const tx = await contractWrite.buyNFT(id, priceNFT, { value: priceNFT });
       await tx.wait();
-
     } catch (error) {
       if (error.code === 4001) {
         toast.error("Connection denied");
@@ -328,9 +336,7 @@ export function UserProvider({ children }) {
 
   const fetchMintedProducts = async (name) => {
     const tokenCounter = await readContract.tokenCounter();
-    const counter = tokenCounter.toString()
-    console.log(counter)
-
+    const counter = tokenCounter.toString();
     const filteredProduct = productList
       .flat()
       .filter((item) => item.name === name);
@@ -339,17 +345,17 @@ export function UserProvider({ children }) {
       const tokenUri = filteredProduct[0].tokenURI;
       const isMinted = await readContract.isMinted(tokenUri);
 
-      for (let tokenId = 0; tokenId < counter; tokenId++){
+      for (let tokenId = 0; tokenId < counter; tokenId++) {
         const uri = await readContract.tokenURI(tokenId);
-        if(uri === tokenUri){
+        if (uri === tokenUri) {
           id = tokenId;
           break;
         }
       }
 
-      return {minted: isMinted, id: id};
+      return { minted: isMinted, id: id };
     }
-    return {minted: false, id: null};
+    return { minted: false, id: null };
   };
 
   useEffect(() => {
