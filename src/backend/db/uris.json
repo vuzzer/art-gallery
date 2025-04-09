@@ -12,17 +12,17 @@
   {
     "name": "Empower Pro X",
     "tokenURI": "https://bafkreiajtyrtcjnouuuizqtwxlenodyjkp2suhryif2jodepxhezv7zzie.ipfs.w3s.link",
-    "isStock": false
+    "isStock": true
   },
   {
     "name": "Elite Reactor",
     "tokenURI": "https://bafkreihilbi2mpjf7cmraw46vbrv33sr45eq5em5spnkntecenh6t4o2aa.ipfs.w3s.link",
-    "isStock": false
+    "isStock": true
   },
   {
     "name": "Catalyst Hyper",
     "tokenURI": "https://bafkreifcn5rdsh7wbgb4yxtwf3twxw2ehha6soiq5kj2nzc7efdgjclyau.ipfs.w3s.link",
-    "isStock": false
+    "isStock": true
   },
   {
     "name": "Fusion Element",

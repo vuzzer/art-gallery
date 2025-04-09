@@ -1,10 +1,9 @@
 {
   "name": "hardhat-project",
   "scripts": {
-    "nft": "node scripts/upload-nfts.js",
     "deploy": "npx hardhat run scripts/deploy-proxy.js --network sepolia",
     "mintNFT": "npx hardhat run scripts/mint-and-list.js --network sepolia",
-    "ipfs": "npx hardhat run scripts/upload-to-ipfs.js --network sepolia",
+    "ipfs": "node scripts/upload-to-ipfs.js",
     "compile": "npx hardhat compile",
     "clean": "npx hardhat clean",
     "test": "npx hardhat test"

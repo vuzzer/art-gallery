@@ -37,7 +37,7 @@ export const products = [
     original_price: 999,
     discounted_price: 999,
     category_name: "Digital_Painting",
-    is_stock: false,
+    is_stock: true,
     rating: 4.2,
     reviews: 89,
     description:
@@ -52,7 +52,7 @@ export const products = [
     original_price: 1299,
     discounted_price: 1199,
     category_name: "Digital_Painting",
-    is_stock: false,
+    is_stock: true,
     rating: 4.9,
     reviews: 398,
     description:
@@ -67,7 +67,7 @@ export const products = [
     original_price: 199,
     discounted_price: 99,
     category_name: "Realism",
-    is_stock: false,
+    is_stock: true,
     rating: 4.7,
     reviews: 433,
     description:
